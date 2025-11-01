@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Satham Hussain - Senior Mobile Developer with 9+ years of iOS and Android experience">
+    <title>Satham Hussain - Senior Mobile Developer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Calibri', 'Arial', 'Helvetica', sans-serif;
+            line-height: 1.6;
+            color: #000000;
+            background-color: #ffffff;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 40px 50px;
+        }
+
+        /* Header Section */
+        header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #000000;
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background-color: #0066cc;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background-color 0.3s, transform 0.2s;
+            border: none;
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .download-btn:hover {
+            background-color: #0052a3;
+            transform: translateY(-2px);
+        }
+
+        .download-btn:active {
+            transform: translateY(0);
+        }
+
+        header h2 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333333;
+            margin-bottom: 12px;
+        }
+
+        .contact-info {
+            font-size: 11px;
+            color: #000000;
+            line-height: 1.8;
+        }
+
+        .contact-info a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .contact-info span {
+            margin: 0 8px;
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 25px;
+            page-break-inside: avoid;
+        }
+
+        h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: #000000;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #000000;
+            letter-spacing: 0.5px;
+        }
+
+        /* Summary Section */
+        .summary p {
+            font-size: 11px;
+            text-align: justify;
+            margin-bottom: 8px;
+        }
+
+        /* Skills Section */
+        .skills-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .skill-category {
+            margin-bottom: 10px;
+        }
+
+        .skill-category h4 {
+            font-size: 12px;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 5px;
+        }
+
+        .skill-category p {
+            font-size: 11px;
+            line-height: 1.5;
+        }
+
+        /* Experience Section */
+        .experience-item {
+            margin-bottom: 20px;
+            page-break-inside: avoid;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 4px;
+        }
+
+        .job-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: #000000;
+        }
+
+        .job-date {
+            font-size: 11px;
+            color: #333333;
+            font-style: italic;
+        }
+
+        .company-name {
+            font-size: 12px;
+            font-weight: 600;
+            color: #333333;
+            margin-bottom: 6px;
+        }
+
+        .experience-item ul {
+            margin-left: 18px;
+            font-size: 11px;
+        }
+
+        .experience-item li {
+            margin-bottom: 4px;
+            line-height: 1.5;
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .project-item {
+            margin-bottom: 12px;
+            page-break-inside: avoid;
+        }
+
+        .project-item h4 {
+            font-size: 12px;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 3px;
+        }
+
+        .project-tech {
+            font-size: 10px;
+            color: #666666;
+            font-style: italic;
+            margin-bottom: 4px;
+        }
+
+        .project-item p {
+            font-size: 11px;
+            line-height: 1.5;
+        }
+
+        /* Highlights/Bullets */
+        .highlights-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5px 15px;
+            margin-top: 8px;
+        }
+
+        .highlights-list li {
+            font-size: 11px;
+            margin-left: 18px;
+            line-height: 1.5;
+        }
+
+        /* Education Section */
+        .education-item {
+            margin-bottom: 10px;
+        }
+
+        .education-item h4 {
+            font-size: 12px;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 3px;
+        }
+
+        .education-details {
+            font-size: 11px;
+            color: #333333;
+        }
+
+        /* Technical Certifications/Languages */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            font-size: 11px;
+            margin-top: 8px;
+        }
+
+        /* Print Optimization */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                max-width: 100%;
+                padding: 0;
+            }
+
+            section {
+                page-break-inside: avoid;
+            }
+
+            .download-btn {
+                display: none;
+            }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            .skills-container,
+            .projects-grid,
+            .highlights-list {
+                grid-template-columns: 1fr;
+            }
+
+            .job-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .info-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Strong text for ATS keywords */
+        strong {
+            font-weight: 700;
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <button class="download-btn" onclick="downloadPDF()">📄 PDF</button>
+            <h1>SATHAM HUSSAIN</h1>
+            <h2>Senior Mobile Developer</h2>
+            <div class="contact-info">
+                +971 568639915 / +91 9788931996 <span>|</span>
+                <a href="mailto:sathamkhussain@gmail.com">sathamkhussain@gmail.com</a> <span>|</span>
+                <a href="https://linkedin.com/in/sathamkhussain" target="_blank">LinkedIn</a> <span>|</span>
+                Dubai, UAE
+            </div>
+        </header>
+
+        <!-- Professional Summary -->
+        <section>
+            <h3>Professional Summary</h3>
+            <div class="summary">
+                <p>Results-driven <strong>Senior Mobile Developer</strong> with <strong>11+ years of experience</strong> in <strong>iOS</strong> and <strong>Android application development</strong>. Proven expertise in full software development lifecycle (<strong>SDLC</strong>) including requirement analysis, design, coding, testing, and deployment. Specialized in <strong>Swift, SwiftUI, Objective-C</strong>, and <strong>Java</strong> with hands-on experience in <strong>Apple Vision Pro</strong> development. Successfully delivered 30+ applications across business, financial, healthcare, and e-commerce domains. Expert in <strong>payment gateway integration</strong> (HYPERPAY, Apple Pay), <strong>RESTful APIs</strong>, and modern architectural patterns (<strong>MVC, MVVM</strong>). Strong background in <strong>Agile/Scrum</strong> methodologies and offshore team management.</p>
+            </div>
+        </section>
+
+        <!-- Technical Skills -->
+        <section>
+            <h3>Technical Skills</h3>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h4>Programming Languages</h4>
+                    <p><strong>iOS:</strong> Swift, SwiftUI, Objective-C<br>
+                    <strong>Android:</strong> Java<br>
+                    <strong>Web:</strong> HTML5, CSS3, JavaScript</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Frameworks & Technologies</h4>
+                    <p>UIKit, Core Location, MapKit, MessageUI, Firebase, Alamofire, RESTful APIs, JSON, XML, SQLite, Core Data, SOAP</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Architecture & Design Patterns</h4>
+                    <p>MVC, MVVM, Singleton, Delegate Pattern, Notification Pattern</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Development Tools</h4>
+                    <p>Xcode, Android Studio, Git, GitHub, BitBucket, Source Tree, SVN, TestFlight, JIRA, Team Base</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Payment Integration</h4>
+                    <p>HYPERPAY (MENA region), Apple Pay, Ingenico devices</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Additional Expertise</h4>
+                    <p>Apple Vision Pro, Google Maps API, Push Notifications, Social Media Integration, Storyboard, Interface Builder, Auto Layout</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Experience -->
+        <section>
+            <h3>Professional Experience</h3>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div class="job-title">Senior iOS Developer</div>
+                    <div class="job-date">Dec 2023 - Present</div>
+                </div>
+                <div class="company-name">Dubai Electricity and Water Authority (DEWA) | Dubai, UAE</div>
+                <ul>
+                    <li>Pioneered development of <strong>DEWA Vision Pro App</strong> for Apple's spatial computing platform</li>
+                    <li>Developed <strong>DEWA Watch App</strong> for Apple Watch providing quick access to utility services</li>
+                    <li>Led complete <strong>DEWA app revamp</strong> improving user experience for 500K+ active users</li>
+                    <li>Developed <strong>Internship Survey module</strong> streamlining recruitment processes</li>
+                    <li>Implemented <strong>RESTful web services</strong> and <strong>JSON parsing</strong> for real-time data integration</li>
+                    <li>Utilized <strong>Git version control</strong> and maintained code quality through rigorous testing</li>
+                    <li>Managed <strong>App Store deployment</strong> and <strong>TestFlight distribution</strong> for beta testing</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div class="job-title">Senior iOS Developer</div>
+                    <div class="job-date">Jul 2022 - Nov 2023</div>
+                </div>
+                <div class="company-name">Alpha Data (Outsourced to DEWA) | Dubai, UAE</div>
+                <ul>
+                    <li>Developed <strong>DEWA Smart App</strong> providing integrated digital services for multiple stakeholder groups</li>
+                    <li>Built <strong>WETEX event application</strong> supporting Dubai's sustainability initiatives</li>
+                    <li>Created <strong>DEWA Career Fair app</strong> with <strong>Emirates ID scanning</strong> functionality</li>
+                    <li>Implemented <strong>wireframe designs</strong> and responsive UI for iPhone and iPad</li>
+                    <li>Integrated third-party frameworks including <strong>Firebase</strong> and <strong>Google Maps</strong></li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div class="job-title">Senior iOS Developer</div>
+                    <div class="job-date">Nov 2015 - Jun 2022</div>
+                </div>
+                <div class="company-name">Almusbah Group of Companies | Jeddah, Saudi Arabia</div>
+                <ul>
+                    <li>Developed <strong>Mawgif parking application</strong> (iOS & Android) with <strong>payment gateway integration</strong></li>
+                    <li>Built <strong>Enforcer App</strong> for field operations with <strong>Ingenico device integration</strong> for parking enforcement</li>
+                    <li>Created <strong>Smart School system</strong>, <strong>ADN POS application</strong>, and <strong>eConnect HR platform</strong></li>
+                    <li>Managed both <strong>iOS and Android development</strong> delivering cross-platform solutions</li>
+                    <li>Implemented <strong>MVC, Singleton, and Delegate patterns</strong> for scalable architecture</li>
+                    <li>Worked under <strong>Agile/Scrum</strong> methodology completing sprints on schedule</li>
+                    <li>Developed company website using <strong>HTML5, CSS3, and JavaScript</strong></li>
+                    <li>Integrated <strong>SQLite databases</strong> and <strong>Core Data</strong> for local data management</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div class="job-title">iOS Developer</div>
+                    <div class="job-date">Mar 2015 - Aug 2015</div>
+                </div>
+                <div class="company-name">Ipedis India Pvt Limited | Chennai, India</div>
+                <ul>
+                    <li>Developed financial applications including <strong>ABC Arbitrage</strong> for stock market investors</li>
+                    <li>Implemented <strong>Lundbeck Speaker Program (LSP)</strong> for pharmaceutical campaign management</li>
+                    <li>Created applications with <strong>social media integration</strong> (Facebook, Twitter, Google+)</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div class="job-title">iOS Developer</div>
+                    <div class="job-date">Dec 2013 - Feb 2015</div>
+                </div>
+                <div class="company-name">Magnum IT Solutions | Chennai, India</div>
+                <ul>
+                    <li>Developed healthcare applications using <strong>AV Foundation</strong> framework</li>
+                    <li>Implemented <strong>XML parsing</strong> and <strong>RESTful web services</strong></li>
+                    <li>Utilized <strong>Grand Central Dispatch (GCD)</strong> for background task management</li>
+                    <li>Deployed applications to <strong>App Store</strong> following Apple's distribution guidelines</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div class="job-title">iOS Developer</div>
+                    <div class="job-date">May 2013 - Dec 2013</div>
+                </div>
+                <div class="company-name">Svapas Innovations Private Limited | Chennai, India</div>
+                <ul>
+                    <li>Developed <strong>Learning Aisle</strong> educational platform using <strong>HTML5, CSS3, JavaScript</strong></li>
+                    <li>Created <strong>iSchematic</strong> industrial maintenance troubleshooting tool</li>
+                    <li>Integrated <strong>JSON parsers</strong> and designed app workflows using <strong>Storyboards</strong></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Key Projects -->
+        <section>
+            <h3>Key Projects</h3>
+            <div class="projects-grid">
+                <div class="project-item">
+                    <h4>DEWA Vision Pro App</h4>
+                    <div class="project-tech">Swift | Xcode 15 | 2024-Present</div>
+                    <p>Innovative spatial computing app for Apple Vision Pro providing immersive utility services experience.</p>
+                </div>
+
+                <div class="project-item">
+                    <h4>DEWA Smart App</h4>
+                    <div class="project-tech">Swift | Xcode 14/15 | 2022-Present</div>
+                    <p>Comprehensive digital platform with integrated services for consumers, builders, suppliers, and students.</p>
+                </div>
+
+                <div class="project-item">
+                    <h4>Mawgif Parking Solution</h4>
+                    <div class="project-tech">Swift, Objective-C, Java | 2017-2022</div>
+                    <p>Full-featured parking app with wallet management, payment integration, and real-time notifications.</p>
+                </div>
+
+                <div class="project-item">
+                    <h4>Enforcer App</h4>
+                    <div class="project-tech">Android, Java | 2020-2022</div>
+                    <p>Field operations app for parking enforcement with Ingenico payment device integration.</p>
+                </div>
+
+                <div class="project-item">
+                    <h4>MShop E-commerce</h4>
+                    <div class="project-tech">SwiftUI, Firebase | 2021-Present</div>
+                    <p>Online delivery platform with Firebase backend for complete order management.</p>
+                </div>
+
+                <div class="project-item">
+                    <h4>Smart School System</h4>
+                    <div class="project-tech">Swift 5, Java | 2019-2022</div>
+                    <p>Educational management platform for teachers and administrators.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Competencies -->
+        <section>
+            <h3>Core Competencies</h3>
+            <ul class="highlights-list">
+                <li>Full SDLC implementation from requirements to deployment</li>
+                <li>Cross-platform mobile development (iOS & Android)</li>
+                <li>Payment gateway integration and secure transactions</li>
+                <li>RESTful API design and integration</li>
+                <li>Database management (SQLite, Core Data)</li>
+                <li>Agile/Scrum project management</li>
+                <li>Offshore team management and collaboration</li>
+                <li>App Store and enterprise distribution processes</li>
+                <li>Performance optimization and debugging</li>
+                <li>UI/UX design and wireframing</li>
+            </ul>
+        </section>
+
+        <!-- Education -->
+        <section>
+            <h3>Education</h3>
+            <div class="education-item">
+                <h4>Bachelor of Technology in Information Technology</h4>
+                <div class="education-details">CSI Institute of Technology, Tamil Nadu | 2012 | 73.5% Aggregate</div>
+            </div>
+        </section>
+
+        <!-- Languages -->
+        <section>
+            <h3>Languages</h3>
+            <div class="info-grid">
+                <span>English</span>
+                <span>Tamil</span>
+                <span>Malayalam</span>
+                <span>Hindi</span>
+                <span>Arabic</span>
+            </div>
+        </section>
+
+        <!-- Additional Information -->
+        <section>
+            <h3>Additional Information</h3>
+            <div class="summary">
+                <p><strong>Marital Status:</strong> Married | <strong>Visa Status:</strong> US B1 (10-year validity) | <strong>Nationality:</strong> Indian | <strong>Current Location:</strong> Dubai, UAE</p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function downloadPDF() {
+            // Hide the download button before printing
+            const downloadBtn = document.querySelector('.download-btn');
+            downloadBtn.style.display = 'none';
+            
+            // Trigger browser's print dialog
+            window.print();
+            
+            // Show the button again after print dialog
+            setTimeout(() => {
+                downloadBtn.style.display = 'inline-block';
+            }, 100);
+        }
+    </script>
+</body>
+</html>
