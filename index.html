@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Satham Hussain - Senior Mobile Developer with 9+ years of iOS and Android experience">
-    <title>Satham Hussain - Senior Mobile Developer</title>
+    <meta name="description" content="Satham Hussain - Senior iOS Engineer developing mobile applications since May 2013">
+    <title>Satham Hussain - Senior iOS Engineer</title>
     <style>
         * {
             margin: 0;
@@ -257,9 +257,16 @@
 
         /* Print Optimization */
         @media print {
+            @page {
+                size: A4;
+                margin: 14mm;
+            }
+
             body {
                 background: white;
                 padding: 0;
+                font-size: 10pt;
+                line-height: 1.3;
             }
             
             .container {
@@ -268,11 +275,47 @@
             }
 
             section {
+                margin-bottom: 12pt;
+                page-break-inside: auto;
+                break-inside: auto;
+            }
+
+            h3,
+            .job-header,
+            .company-name,
+            .project-item h4,
+            .education-item h4 {
+                page-break-after: avoid;
+                break-after: avoid;
+            }
+
+            .skills-container,
+            .projects-grid,
+            .highlights-list,
+            .info-grid {
+                display: block;
+            }
+
+            .skill-category,
+            .project-item,
+            .experience-item,
+            .education-item {
                 page-break-inside: avoid;
+                break-inside: avoid;
+            }
+
+            .job-header,
+            .job-date {
+                display: block;
             }
 
             .download-btn {
                 display: none;
+            }
+
+            a {
+                color: #000000;
+                text-decoration: none;
             }
         }
 
@@ -311,7 +354,7 @@
         <header>
             <button class="download-btn" onclick="downloadPDF()">📄 PDF</button>
             <h1>SATHAM HUSSAIN</h1>
-            <h2>Senior Mobile Developer</h2>
+            <h2>Senior iOS Engineer</h2>
             <div class="contact-info">
                 +971 568639915 <span>|</span>
                 <a href="mailto:sathamkhussain@gmail.com">sathamkhussain@gmail.com</a> <span>|</span>
@@ -324,7 +367,7 @@
         <section>
             <h3>Professional Summary</h3>
             <div class="summary">
-                <p>Results-driven <strong>Senior Mobile Developer</strong> with <strong>11+ years of experience</strong> in <strong>iOS</strong> and <strong>Android application development</strong>. Proven expertise in full software development lifecycle (<strong>SDLC</strong>) including requirement analysis, design, coding, testing, and deployment. Specialized in <strong>Swift, SwiftUI, Objective-C</strong>, and <strong>Java, Kotlin</strong> with hands-on experience in development. Successfully delivered 30+ applications across business, financial, healthcare, and e-commerce domains. Expert in <strong>payment gateway integration</strong> (HYPERPAY, Apple Pay), <strong>RESTful APIs</strong>, and modern architectural patterns (<strong>MVC, MVVM</strong>). Strong background in <strong>Agile/Scrum</strong> methodologies and offshore team management.</p>
+                <p><strong>Senior iOS Engineer</strong> with <strong id="experience-summary">mobile application development experience since May 2013</strong>, specializing in native iOS development with <strong>Swift, SwiftUI, Objective-C, and UIKit</strong>. Experienced across the software development lifecycle, from requirements analysis and implementation through testing, App Store distribution, and production support. Contributed to <strong>DEWA</strong> and <strong>Mawgif</strong> mobile applications serving million-user audiences, and delivered applications across utilities, parking, payments, e-commerce, education, healthcare, and business services. Additional experience developing Android applications.</p>
             </div>
         </section>
 
@@ -335,12 +378,12 @@
                 <div class="skill-category">
                     <h4>Programming Languages</h4>
                     <p><strong>iOS:</strong> Swift, SwiftUI, Objective-C<br>
-                    <strong>Android:</strong> Java, Kotlin, Jetpack Compose<br>
+                    <strong>Android:</strong> Java<br>
                     <strong>Web:</strong> HTML5, CSS3, JavaScript</p>
                 </div>
                 <div class="skill-category">
                     <h4>Frameworks & Technologies</h4>
-                    <p>UIKit, Core Location, MapKit, MessageUI, Firebase, Alamofire, RESTful APIs, JSON, XML, SQLite, Core Data, SOAP</p>
+                    <p>UIKit, SwiftUI, Core Location, MapKit, Core Data, SQLite, AVFoundation, MessageUI, Auto Layout, Storyboards, XIB, Firebase, Alamofire, REST APIs, JSON, XML, SOAP</p>
                 </div>
                 <div class="skill-category">
                     <h4>Architecture & Design Patterns</h4>
@@ -348,15 +391,15 @@
                 </div>
                 <div class="skill-category">
                     <h4>Development Tools</h4>
-                    <p>Xcode, Android Studio, Git, GitHub, BitBucket, Source Tree, SVN, TestFlight, JIRA, TFS</p>
+                    <p>Xcode, Android Studio, Git, GitHub, Bitbucket, TestFlight, JIRA</p>
                 </div>
                 <div class="skill-category">
                     <h4>Payment Integration</h4>
-                    <p>HYPERPAY (MENA region), Apple Pay, Ingenico devices</p>
+                    <p>HyperPay (MENA region), Apple Pay, Ingenico payment devices</p>
                 </div>
                 <div class="skill-category">
                     <h4>Additional Expertise</h4>
-                    <p>Apple Vision Pro, Google Maps API, Push Notifications, Social Media Integration, Storyboard, Interface Builder, Auto Layout</p>
+                    <p>Apple Vision Pro, Google Maps API, Push Notifications, Interface Builder</p>
                 </div>
             </div>
         </section>
@@ -372,13 +415,9 @@
                 </div>
                 <div class="company-name">Dubai Electricity and Water Authority (DEWA) | Dubai, UAE</div>
                 <ul>
-                    <li>Pioneered development of <strong>DEWA Vision Pro App</strong> for Apple's spatial computing platform</li>
-                    <li>Developed <strong>DEWA Watch App</strong> for Apple Watch providing quick access to utility services</li>
-                    <li>Led complete <strong>DEWA app revamp</strong> improving user experience for 3M+ active users</li>
-                    <li>Developed <strong>Internship Survey module</strong> streamlining recruitment processes</li>
-                    <li>Implemented <strong>RESTful web services</strong> and <strong>JSON parsing</strong> for real-time data integration</li>
-                    <li>Utilized <strong>Git version control</strong> and maintained code quality through rigorous testing</li>
-                    <li>Managed <strong>App Store deployment</strong> and <strong>TestFlight distribution</strong> for beta testing</li>
+                    <li>Contribute to multiple modules of the <strong>DEWA iOS app</strong>, including app revamp work, for a utility platform serving a million-user audience.</li>
+                    <li>Developed an application for <strong>Apple Vision Pro</strong> and delivered the <strong>Internship Survey module</strong>.</li>
+                    <li>Integrated <strong>RESTful web services</strong> using JSON and supported testing, TestFlight distribution, App Store releases, and production maintenance.</li>
                 </ul>
             </div>
 
@@ -389,11 +428,10 @@
                 </div>
                 <div class="company-name">Alpha Data (Outsourced to DEWA) | Dubai, UAE</div>
                 <ul>
-                    <li>Developed <strong>DEWA Smart App</strong> providing integrated digital services for multiple stakeholder groups</li>
-                    <li>Built <strong>WETEX event application</strong> supporting Dubai's sustainability initiatives</li>
-                    <li>Created <strong>DEWA Career Fair app</strong> with <strong>Emirates ID scanning</strong> functionality</li>
-                    <li>Implemented <strong>wireframe designs</strong> and responsive UI for iPhone and iPad</li>
-                    <li>Integrated third-party frameworks including <strong>Firebase</strong> and <strong>Google Maps</strong></li>
+                    <li>Developed iOS application features for the <strong>DEWA Smart App</strong> and <strong>WETEX</strong> event application.</li>
+                    <li>Built the <strong>DEWA Career Fair app</strong>, including Emirates ID scanning functionality.</li>
+                    <li>Implemented wireframes and user interfaces for iPhone and iPad, integrating REST/JSON services and third-party frameworks including Firebase and Google Maps.</li>
+                    <li>Supported application testing, TestFlight distribution, and App Store submission.</li>
                 </ul>
             </div>
 
@@ -404,14 +442,11 @@
                 </div>
                 <div class="company-name">Almusbah Group of Companies | Jeddah, Saudi Arabia</div>
                 <ul>
-                    <li>Developed <strong>Mawgif parking application</strong> (iOS & Android) with <strong>payment gateway integration</strong></li>
-                    <li>Built <strong>Enforcer App</strong> for field operations with <strong>Ingenico device integration</strong> for parking enforcement</li>
-                    <li>Created <strong>Smart School system</strong>, <strong>ADN POS application</strong>, and <strong>eConnect HR platform</strong></li>
-                    <li>Managed both <strong>iOS and Android development</strong> delivering cross-platform solutions</li>
-                    <li>Implemented <strong>MVC, Singleton, and Delegate patterns</strong> for scalable architecture</li>
-                    <li>Worked under <strong>Agile/Scrum</strong> methodology completing sprints on schedule</li>
-                    <li>Developed company website using <strong>HTML5, CSS3, and JavaScript</strong></li>
-                    <li>Integrated <strong>SQLite databases</strong> and <strong>Core Data</strong> for local data management</li>
+                    <li>Developed and maintained iOS and Android applications, including the <strong>Mawgif parking platform</strong>, which serves a million-user audience.</li>
+                    <li>Implemented parking, wallet, vehicle-status, and notification features, and contributed to field-enforcement workflows and payment-device integration.</li>
+                    <li>Delivered applications for school administration, point of sale, employee services, and e-commerce.</li>
+                    <li>Integrated REST/JSON services and local data storage using SQLite and Core Data; worked with MVC and related iOS design patterns.</li>
+                    <li>Supported application testing, release distribution, production maintenance, and collaboration with local and offshore teams.</li>
                 </ul>
             </div>
 
@@ -422,9 +457,7 @@
                 </div>
                 <div class="company-name">Ipedis India Pvt Limited | Chennai, India</div>
                 <ul>
-                    <li>Developed financial applications including <strong>ABC Arbitrage</strong> for stock market investors</li>
-                    <li>Implemented <strong>Lundbeck Speaker Program (LSP)</strong> for pharmaceutical campaign management</li>
-                    <li>Created applications with <strong>social media integration</strong> (Facebook, Twitter, Google+)</li>
+                    <li>Delivered iOS application work, including an event module, within Agile sprint cycles; integrated REST/JSON services and used Git for source control.</li>
                 </ul>
             </div>
 
@@ -435,10 +468,8 @@
                 </div>
                 <div class="company-name">Magnum IT Solutions | Chennai, India</div>
                 <ul>
-                    <li>Developed healthcare applications using <strong>AV Foundation</strong> framework</li>
-                    <li>Implemented <strong>XML parsing</strong> and <strong>RESTful web services</strong></li>
-                    <li>Utilized <strong>Grand Central Dispatch (GCD)</strong> for background task management</li>
-                    <li>Deployed applications to <strong>App Store</strong> following Apple's distribution guidelines</li>
+                    <li>Developed iOS applications, including healthcare projects, and handled implementation, debugging, testing, and App Store deployment.</li>
+                    <li>Used AVFoundation, SQLite, XML parsing, REST services, and Grand Central Dispatch for background tasks.</li>
                 </ul>
             </div>
 
@@ -449,9 +480,7 @@
                 </div>
                 <div class="company-name">Svapas Innovations Private Limited | Chennai, India</div>
                 <ul>
-                    <li>Developed <strong>Learning Aisle</strong> educational platform using <strong>HTML5, CSS3, JavaScript</strong></li>
-                    <li>Created <strong>iSchematic</strong> industrial maintenance troubleshooting tool</li>
-                    <li>Integrated <strong>JSON parsers</strong> and designed app workflows using <strong>Storyboards</strong></li>
+                    <li>Developed iOS interfaces and application flows using Storyboards; integrated social platforms and JSON-based web services.</li>
                 </ul>
             </div>
         </section>
@@ -462,32 +491,26 @@
             <div class="projects-grid">
                 <div class="project-item">
                     <h4>DEWA Vision Pro App</h4>
-                    <div class="project-tech">Swift | Xcode 15 | 2024-Present</div>
-                    <p>Innovative spatial computing app for Apple Vision Pro providing immersive utility services experience.</p>
+                    <div class="project-tech">Swift | Apple Vision Pro</div>
+                    <p>Developed an application for Apple's spatial computing platform.</p>
                 </div>
 
                 <div class="project-item">
                     <h4>DEWA Smart App</h4>
-                    <div class="project-tech">Swift | Xcode 14/15 | 2022-Present</div>
+                    <div class="project-tech">Swift | iOS</div>
                     <p>Comprehensive digital platform with integrated services for consumers, builders, suppliers, and students.</p>
                 </div>
 
                 <div class="project-item">
                     <h4>Mawgif Parking Solution</h4>
-                    <div class="project-tech">Swift, Objective-C, Java | 2017-2022</div>
-                    <p>Full-featured parking app with wallet management, payment integration, and real-time notifications.</p>
+                    <div class="project-tech">Swift | Objective-C | Java</div>
+                    <p>Parking platform with wallet management, vehicle status, and notifications; serves a million-user audience.</p>
                 </div>
 
                 <div class="project-item">
                     <h4>Enforcer App</h4>
-                    <div class="project-tech">Android, Java | 2020-2022</div>
+                    <div class="project-tech">Android | Java</div>
                     <p>Field operations app for parking enforcement with Ingenico payment device integration.</p>
-                </div>
-
-                <div class="project-item">
-                    <h4>MShop E-commerce</h4>
-                    <div class="project-tech">SwiftUI, Firebase | 2021-Present</div>
-                    <p>Online delivery platform with Firebase backend for complete order management.</p>
                 </div>
 
                 <div class="project-item">
@@ -496,23 +519,6 @@
                     <p>Educational management platform for teachers and administrators.</p>
                 </div>
             </div>
-        </section>
-
-        <!-- Core Competencies -->
-        <section>
-            <h3>Core Competencies</h3>
-            <ul class="highlights-list">
-                <li>Full SDLC implementation from requirements to deployment</li>
-                <li>Cross-platform mobile development (iOS & Android)</li>
-                <li>Payment gateway integration and secure transactions</li>
-                <li>RESTful API design and integration</li>
-                <li>Database management (SQLite, Core Data)</li>
-                <li>Agile/Scrum project management</li>
-                <li>Offshore team management and collaboration</li>
-                <li>App Store and enterprise distribution processes</li>
-                <li>Performance optimization and debugging</li>
-                <li>UI/UX design and wireframing</li>
-            </ul>
         </section>
 
         <!-- Education -->
@@ -536,16 +542,19 @@
             </div>
         </section>
 
-        <!-- Additional Information -->
-        <section>
-            <h3>Additional Information</h3>
-            <div class="summary">
-                <p><strong>Marital Status:</strong> Married | <strong>Nationality:</strong> Indian | <strong>Current Location:</strong> Dubai, UAE</p>
-            </div>
-        </section>
     </div>
 
     <script>
+        function updateExperience(today = new Date()) {
+            // The work history specifies May 2013, so count completed years by month.
+            const years = today.getFullYear() - 2013 - (today.getMonth() < 4 ? 1 : 0);
+            document.getElementById('experience-summary').textContent =
+                `${years}+ years of mobile application development experience`;
+        }
+
+        updateExperience();
+        window.addEventListener('beforeprint', () => updateExperience());
+
         function downloadPDF() {
             // Hide the download button before printing
             const downloadBtn = document.querySelector('.download-btn');
